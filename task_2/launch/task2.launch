@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find px4)/launch/mavros_posix_sitl.launch"/>
+
+    <node name="task_2" pkg="task_2" type="task_2_node" output="screen"/>
+    <node name ="link1_broadcaster" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 local_origin_ned fcu 10" />
+</launch>
